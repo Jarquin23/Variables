@@ -35,6 +35,7 @@
             this.btnVerificar = new System.Windows.Forms.Button();
             this.lblVariableLocal = new System.Windows.Forms.Label();
             this.lblVariableGlobal = new System.Windows.Forms.Label();
+            this.btnVerificarG = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -71,9 +72,9 @@
             // 
             // btnVerificar
             // 
-            this.btnVerificar.Location = new System.Drawing.Point(99, 139);
+            this.btnVerificar.Location = new System.Drawing.Point(34, 130);
             this.btnVerificar.Name = "btnVerificar";
-            this.btnVerificar.Size = new System.Drawing.Size(273, 38);
+            this.btnVerificar.Size = new System.Drawing.Size(165, 38);
             this.btnVerificar.TabIndex = 4;
             this.btnVerificar.Text = "Verificar";
             this.btnVerificar.UseVisualStyleBackColor = true;
@@ -97,11 +98,21 @@
             this.lblVariableGlobal.TabIndex = 6;
             this.lblVariableGlobal.Text = "Variable Global";
             // 
+            // btnVerificarG
+            // 
+            this.btnVerificarG.Location = new System.Drawing.Point(238, 130);
+            this.btnVerificarG.Name = "btnVerificarG";
+            this.btnVerificarG.Size = new System.Drawing.Size(134, 38);
+            this.btnVerificarG.TabIndex = 7;
+            this.btnVerificarG.Text = "Verificar Global";
+            this.btnVerificarG.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 450);
+            this.Controls.Add(this.btnVerificarG);
             this.Controls.Add(this.lblVariableGlobal);
             this.Controls.Add(this.lblVariableLocal);
             this.Controls.Add(this.btnVerificar);
@@ -125,6 +136,7 @@
         private System.Windows.Forms.Button btnVerificar;
         private System.Windows.Forms.Label lblVariableLocal;
         private System.Windows.Forms.Label lblVariableGlobal;
+        private System.Windows.Forms.Button btnVerificarG;
     }
 }
 
