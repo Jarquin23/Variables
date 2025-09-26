@@ -13,6 +13,9 @@ namespace Variables
             InitializeComponent();
         }
 
-        
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            lblFecha.Text = DateTime.Now.ToString();
+        }
     }
 }
