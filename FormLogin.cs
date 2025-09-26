@@ -42,23 +42,35 @@ namespace Variables
             this.Close();
         }
 
+        int contador = 0;
         private void btnAcceder_Click(object sender, EventArgs e)
         {
             if (Login(tbUser.Text, tbPassword.Text))
             {
                 this.DialogResult = DialogResult.OK;
                 this.Close();
-                new FrmPrincipal().Show();
-                this.Hide();
+                //new FrmPrincipal().Show();
+                //this.Hide();
             }
-            
+            else
             {
+                contador++;
                 MessageBox.Show("Has excedido los intentos permitidos.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (contador == 3)
+            {
+                MessageBox.Show("Has excedido el límite de intentos permitidos.", "Error:", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private Boolean Login(string username, string password)
         {
             return username.Equals("admin") && password.Equals("admin");
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
