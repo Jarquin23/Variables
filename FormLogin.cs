@@ -46,9 +46,14 @@ namespace Variables
         {
             if (Login(tbUser.Text, tbPassword.Text))
             {
-                Form1 frm = new Form1();
-                frm.Show();
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+                new FrmPrincipal().Show();
                 this.Hide();
+            }
+            
+            {
+                MessageBox.Show("Has excedido los intentos permitidos.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private Boolean Login(string username, string password)
